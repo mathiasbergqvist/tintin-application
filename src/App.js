@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Table from './components/Table';
 import './App.css';
 
 class App extends Component {
@@ -7,12 +7,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <img src="https://c2.staticflickr.com/2/1045/1093572846_00f85c7d3f_m.jpg" className="App-logo"
+               alt="logo"/>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Bibliografi
         </p>
+        <Table title="Tintin Books"/>
       </div>
     );
   }
