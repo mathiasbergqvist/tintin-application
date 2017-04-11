@@ -1,8 +1,17 @@
 import React, {Component} from 'react';
-import Table from './components/Table';
+import Table from './components/table/Table';
 import './App.css';
+import {loadBooks} from "./lib/dbService";
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: []
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,9 +22,21 @@ class App extends Component {
         <p className="App-intro">
           Bibliografi
         </p>
-        <Table title="Tintin Books"/>
+        <Table books={this.state.books}/>
       </div>
     );
+  }
+
+  componentDidMount() {
+    loadBooks()
+      .then(books => {
+        this.setState({
+          books
+        });
+      })
+      .catch(e => {
+        throw new Error(`Error from loadBooks: ${e}`)
+      });
   }
 }
 
