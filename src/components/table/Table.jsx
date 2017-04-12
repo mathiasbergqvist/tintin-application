@@ -1,16 +1,16 @@
 import React from 'react';
-import Style from './TableStyle';
+import TableContainer from './TableContainer';
 
 const Table = (props) => {
 
   return (
-    <div className="container">
+    <TableContainer className="container">
       <table className="table table-striped">
         <thead>
         <tr>
           <th></th>
-          <th style={Style.tableHeader}>Name</th>
-          <th style={Style.tableHeader}>Year</th>
+          <th>Name</th>
+          <th>Year</th>
         </tr>
         </thead>
         <tbody>
@@ -29,7 +29,7 @@ const Table = (props) => {
         ))}
         </tbody>
       </table>
-    </div>
+    </TableContainer>
   );
 };
 
