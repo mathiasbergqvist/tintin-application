@@ -4,3 +4,8 @@ export const loadBooks = () => {
   return fetch(BASE_URL)
     .then(res => res.json());
 };
+
+export const getBook = (id) => {
+  return fetch(`${BASE_URL}/${id}`)
+    .then(res => res.json());
+}
