@@ -29,7 +29,7 @@ class Book extends Component {
   }
 
   render() {
-    const {title, year, location, originalTitle, image} = this.state.book;
+    const {title, year, location, originalTitle, image, likes} = this.state.book;
     return (
       <div>
         <div className="book-title-header text-center">
@@ -56,10 +56,14 @@ class Book extends Component {
               <td className="display-bold">Geografisk plats</td>
               <td>{location}</td>
             </tr>
+            <tr>
+              <td className="display-bold"><span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></td>
+              <td>{likes}</td>
+            </tr>
             </tbody>
           </table>
           <button className={this.getButtonAppearance()} onClick={e => this.handleLike()} disabled={this.state.hasLike}>
-            <span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            <span className="glyphicon glyphicon-thumbs-up button-icon" aria-hidden="true"></span>
           </button>
         </div>
         <div className="comments container">
@@ -72,7 +76,7 @@ class Book extends Component {
             <Button bsStyle="primary">Kommentera</Button>
           </form>
           <div className="user-comments text-center">
-            
+
           </div>
         </div>
       </div>
