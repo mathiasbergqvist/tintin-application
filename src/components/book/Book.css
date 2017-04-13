@@ -31,3 +31,18 @@ img.cover-art {
 span.glyphicon {
   font-size: 30px;
 }
+
+.comments {
+  margin: 30px;
+}
+.form-control {
+  width: 60%;
+}
+
+div.user-comments {
+  width: 80%;
+  height: 200px;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin-top: 15px;
+}

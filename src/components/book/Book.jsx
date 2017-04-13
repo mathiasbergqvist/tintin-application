@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {getBook} from '../../lib/dbService';
 import './Book.css';
+import {Button} from 'react-bootstrap';
 
 class Book extends Component {
 
@@ -60,6 +61,19 @@ class Book extends Component {
           <button className={this.getButtonAppearance()} onClick={e => this.handleLike()} disabled={this.state.hasLike}>
             <span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
           </button>
+        </div>
+        <div className="comments container">
+          <h3>Kommentarer</h3>
+          <form>
+            <div className="form-group">
+              <label for="comment">Comment:</label>
+              <textarea className="form-control" rows="4" id="comment"></textarea>
+            </div>
+            <Button bsStyle="primary">Kommentera</Button>
+          </form>
+          <div className="user-comments text-center">
+            
+          </div>
         </div>
       </div>
     );
