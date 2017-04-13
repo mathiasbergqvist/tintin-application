@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {getBook} from '../../lib/dbService';
-import BookStyle from './BookStyle';
+import './Book.css';
 
 class Book extends Component {
 
@@ -30,7 +30,7 @@ class Book extends Component {
   render() {
     const {title, year, location, originalTitle, image} = this.state.book;
     return (
-      <BookStyle>
+      <div>
         <div className="book-title-header text-center">
           <img src="https://c2.staticflickr.com/4/3165/2641239248_f63b79f350_s.jpg" className="header-image" alt=""/>
           <h1>{title}</h1>
@@ -61,7 +61,7 @@ class Book extends Component {
             <span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
           </button>
         </div>
-      </BookStyle>
+      </div>
     );
   }
 

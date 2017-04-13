@@ -1,11 +1,11 @@
 import React from 'react';
-import TableContainer from './TableStyle';
 import {Link} from 'react-router-dom';
+import './Table.css';
 
 const Table = (props) => {
 
   return (
-    <TableContainer className="container">
+    <div className="container">
       <table className="table">
         <thead>
         <tr>
@@ -32,7 +32,7 @@ const Table = (props) => {
         ))}
         </tbody>
       </table>
-    </TableContainer>
+    </div>
   );
 };
 
