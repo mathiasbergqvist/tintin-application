@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {getBook} from '../../lib/dbService';
+import Comments from '../comments/Comments';
 import './Book.css';
-import {Button} from 'react-bootstrap';
+import {getBook} from '../../lib/dbService';
 
 class Book extends Component {
 
@@ -29,7 +29,7 @@ class Book extends Component {
   }
 
   render() {
-    const {title, year, location, originalTitle, image, likes} = this.state.book;
+    const {id, title, year, location, originalTitle, image, likes} = this.state.book;
     return (
       <div>
         <div className="book-title-header text-center">
@@ -66,19 +66,7 @@ class Book extends Component {
             <span className="glyphicon glyphicon-thumbs-up button-icon" aria-hidden="true"></span>
           </button>
         </div>
-        <div className="comments container">
-          <h3>Kommentarer</h3>
-          <form>
-            <div className="form-group">
-              <label for="comment">Comment:</label>
-              <textarea className="form-control" rows="4" id="comment"></textarea>
-            </div>
-            <Button bsStyle="primary">Kommentera</Button>
-          </form>
-          <div className="user-comments text-center">
-
-          </div>
-        </div>
+        <Comments bookId={id}/>
       </div>
     );
   }
@@ -95,7 +83,6 @@ class Book extends Component {
         throw new Error(`Error from getBook: ${e}`)
       });
   }
-
 }
 
 export default Book;
