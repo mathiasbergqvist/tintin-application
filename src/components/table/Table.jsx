@@ -1,5 +1,6 @@
 import React from 'react';
 import TableContainer from './TableContainer';
+import {Link} from 'react-router-dom';
 
 const Table = (props) => {
 
@@ -15,12 +16,14 @@ const Table = (props) => {
         </thead>
         <tbody>
         {props.books.map((book, id) => (
-          <tr key={id}>
+          <tr key={id}  >
             <td>
               <img src={book.thumbnail} alt=""/>
             </td>
             <td>
-              <p>{book.title}</p>
+              <Link to={`book/${book.id}`}>
+                <p>{book.title}</p>
+              </Link>
             </td>
             <td>
               <p>{book.year}</p>

@@ -13,7 +13,7 @@ const router = (
   <Router>
     <div>
       <Route exact path="/" component={App}/>
-      <Route path="/book" component={Book}/>
+      <Route path="/book/:bookId" component={Book}/>
     </div>
   </Router>
 );
