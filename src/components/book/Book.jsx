@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Comments from '../comments/Comments';
 import './Book.css';
-import {getBook} from '../../lib/dbService';
+import {getBook, updateBook} from '../../lib/dbService';
 
 class Book extends Component {
 
@@ -23,9 +23,12 @@ class Book extends Component {
   }
 
   handleLike() {
+    const updatedBook = {...this.state.book, likes: this.state.book.likes+1};
     this.setState({
-      hasLike: true
+      hasLike: true,
+      book: updatedBook
     });
+    updateBook(updatedBook);
   }
 
   render() {
