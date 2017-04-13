@@ -31,6 +31,10 @@ const BookStyle = styled.div`
   img.cover-art {
     box-shadow: 3px 3px 3px #888888;
   }
+  
+  span.glyphicon {
+    font-size: 30px;
+  }
 `;
 
 export default BookStyle;

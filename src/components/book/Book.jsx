@@ -7,8 +7,24 @@ class Book extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      book: {}
+      book: {},
+      hasLike: false,
     }
+  }
+
+  getButtonAppearance() {
+    if(this.state.hasLike) {
+      return "btn-success btn-lg";
+    }
+    else {
+      return "btn-primary btn-lg";
+    }
+  }
+
+  handleLike() {
+    this.setState({
+      hasLike: true
+    });
   }
 
   render() {
@@ -41,6 +57,9 @@ class Book extends Component {
             </tr>
             </tbody>
           </table>
+          <button className={this.getButtonAppearance()} onClick={e => this.handleLike()} disabled={this.state.hasLike}>
+            <span className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+          </button>
         </div>
       </BookStyle>
     );
