@@ -1,22 +1,22 @@
 import React from 'react';
-import TableContainer from './TableContainer';
+import TableContainer from './TableStyle';
 import {Link} from 'react-router-dom';
 
 const Table = (props) => {
 
   return (
     <TableContainer className="container">
-      <table className="table table-striped">
+      <table className="table">
         <thead>
         <tr>
-          <th></th>
-          <th>Name</th>
-          <th>Year</th>
+          <th><span className="glyphicon glyphicon-book" aria-hidden="true"></span></th>
+          <th>Album</th>
+          <th>Utgivningsår</th>
         </tr>
         </thead>
         <tbody>
         {props.books.map((book, id) => (
-          <tr key={id}  >
+          <tr key={id} className="item-row">
             <td>
               <img src={book.thumbnail} alt=""/>
             </td>
