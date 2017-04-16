@@ -11,7 +11,6 @@ class App extends Component {
   }
 
   render() {
-    const {isFetching, books} = this.props;
     return (
       <div className="App">
         <div className="App-header">
@@ -53,7 +52,7 @@ class App extends Component {
         <Table books={books}/>
       );
     } else {
-      <h2>Oönskat innehåll...</h2>
+      <h2>Kunde inte ladda innehåll...</h2>
     }
   }
 }
