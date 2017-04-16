@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {incrementLike, incrementLikes} from '../../actions/actions';
+import {connect} from 'react-redux';
+import './BookDetails.css';
 
 class BookDetails extends Component {
 
@@ -6,11 +9,15 @@ class BookDetails extends Component {
     super(props);
     this.state = {
       hasLike: false
-    }
+    };
+    this.onLike = this.onLike.bind(this);
   }
 
   render() {
-    const {title, year, location, originalTitle, image, likes} = this.props.book;
+    const bookId = this.props.bookId;
+    const index = this.props.books.findIndex(book => book.id === Number(bookId));
+    const book = this.props.books[index];
+    const {title, year, location, originalTitle, image, likes} = book;
     return (
       <div>
         <div className="book-title-header text-center">
@@ -44,12 +51,19 @@ class BookDetails extends Component {
             </tr>
             </tbody>
           </table>
-          <button className={this.getButtonAppearance()} onClick={e => this.handleLike()} disabled={this.state.hasLike}>
+          <button className={this.getButtonAppearance()} onClick={e => this.onLike(index, book)} disabled={this.state.hasLike}>
             <span className="glyphicon glyphicon-thumbs-up button-icon" aria-hidden="true"></span>
           </button>
         </div>
       </div>
     );
+  }
+
+  onLike(index, book) {
+    this.props.handleLike(index, book);
+    this.setState({
+      hasLike: true
+    });
   }
 
   getButtonAppearance() {
@@ -60,15 +74,21 @@ class BookDetails extends Component {
       return "btn-primary btn-lg";
     }
   }
-
-  // handleLike() {
-  //   const updatedBook = {...this.state.book, likes: this.state.book.likes+1};
-  //   this.setState({
-  //     hasLike: true,
-  //     book: updatedBook
-  //   });
-  //   updateBook(updatedBook);
-  // }
 }
 
-export default BookDetails;
+const mapStateToProps = (state) => {
+  return {
+    books: state.booksData.books
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleLike: (index, book) => {
+      dispatch(incrementLikes(index, book));
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookDetails);
+

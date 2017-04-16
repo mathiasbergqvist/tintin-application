@@ -4,7 +4,7 @@ import Book from './book/Book';
 import configureStore from '../store';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
 } from 'react-router-dom';
 import {Provider} from 'react-redux';
 

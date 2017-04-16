@@ -1,13 +1,48 @@
 import {
   REQUEST_BOOKS,
   RECEIVE_BOOKS,
-  INCREMENT_LIKE,
+  REQUEST_INCREMENT_LIKE,
+  RECEIVE_INCREMENT_LIKE,
   ADD_COMMENT
 } from './actionTypes';
-import {loadBooks} from '../lib/dbService';
+import {loadBooks, updateBook} from '../lib/dbService';
+
+export function incrementLikes(index, book) {
+  return (dispatch) => {
+    dispatch(requestIncrementLike(book));
+    return updateBook(increment(book))
+      .then(book => {
+        dispatch(receiveIncrementLike(index, book));
+      })
+      .catch(e => {
+        throw new Error(`Error from updateBook: ${e}`);
+      })
+  }
+}
+
+export function fetchBooksIfNeeded() {
+  return (dispatch, getState) => {
+    if (shouldFetchBooks(getState())) {
+      return dispatch(fetchBooks());
+    } else {
+      return Promise.resolve();
+    }
+  }
+}
+
+export function addComment(comment, author, bookId) {
+  console.log("ADD COMMENT");
+  return {
+    type: ADD_COMMENT,
+    payload: {
+      bookId,
+      comment,
+      author
+    }
+  }
+}
 
 function fetchBooks() {
-  console.log("FETCH BOOKS");
   return (dispatch) => {
     dispatch(requestBooks());
     return loadBooks()
@@ -20,6 +55,10 @@ function fetchBooks() {
   }
 }
 
+function increment(book){
+  return {...book, likes: book.likes + 1}
+}
+
 function shouldFetchBooks(state) {
   if (state.booksData.books.length === 0) {
     return true;
@@ -30,12 +69,20 @@ function shouldFetchBooks(state) {
   }
 }
 
-export function fetchBooksIfNeeded() {
-  return (dispatch, getState) => {
-    if (shouldFetchBooks(getState())) {
-      return dispatch(fetchBooks());
-    } else {
-      return Promise.resolve();
+function requestIncrementLike() {
+  console.log("REQUEST INCREMENT LIKE");
+  return {
+    type: REQUEST_INCREMENT_LIKE
+  }
+}
+
+function receiveIncrementLike(index, book) {
+  console.log("RECEIVE INCREMENT LIKE");
+  return {
+    type: RECEIVE_INCREMENT_LIKE,
+    payload: {
+      index,
+      book
     }
   }
 }
@@ -54,28 +101,6 @@ function receiveBooks(books) {
     payload: {
       books,
       receivedAt: Date.now()
-    }
-  }
-}
-
-function incrementLike(index) {
-  console.log("INCREMENT LIKE");
-  return {
-    type: INCREMENT_LIKE,
-    payload: {
-      index
-    }
-  }
-}
-
-function addComment(comment, author, bookId) {
-  console.log("ADD COMMENT");
-  return {
-    type: ADD_COMMENT,
-    payload: {
-      bookId,
-      comment,
-      author
     }
   }
 }

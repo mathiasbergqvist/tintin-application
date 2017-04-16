@@ -1,7 +1,8 @@
 import {
   REQUEST_BOOKS,
   RECEIVE_BOOKS,
-  INCREMENT_LIKE
+  REQUEST_INCREMENT_LIKE,
+  RECEIVE_INCREMENT_LIKE
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -24,13 +25,25 @@ function booksData(state = initialState, action) {
         books: action.payload.books,
         lastUpdated: action.payload.receivedAt
       });
-    case INCREMENT_LIKE:
-      const i = action.payload.index;
-      return [
-        ...state.books.slice(0, i),
-        {...state.books[i], likes: state.books[i].likes + 1},
-        ...state.books.slice(i + 1)
+    case REQUEST_INCREMENT_LIKE:
+      return Object.assign({}, state, {
+        isFetching: true,
+        didInvalidate: false
+      });
+    case RECEIVE_INCREMENT_LIKE:
+      const incrementedBookIndex = action.payload.index;
+      const incrementedLikeBooks = [
+        ...state.books.slice(0, incrementedBookIndex),
+        action.payload.book,
+        ...state.books.slice(incrementedBookIndex + 1)
       ];
+      return {
+        ...state,
+        isFetching: false,
+        didInvalidate: false,
+        books: incrementedLikeBooks,
+        lastUpdated: action.payload.receivedAt
+      };
     default:
       return state;
   }
