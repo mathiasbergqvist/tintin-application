@@ -1,0 +1,12 @@
+tr {
+  font-size: 20px;
+}
+
+th {
+  text-align: center;
+}
+
+tr.item-row:hover {
+  cursor: pointer;
+  box-shadow:inset 0px 0px 0px 5px #638cce;
+}

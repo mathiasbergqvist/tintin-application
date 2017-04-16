@@ -1,6 +1,6 @@
 import React from 'react';
+import ListedBook from '../listed-book/ListedBook';
 import './Table.css';
-import ListedBook from '../ListedBook';
 
 const Table = (books) => {
 

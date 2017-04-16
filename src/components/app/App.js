@@ -58,25 +58,9 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-
   return {
     booksData: state.booksData
   }
-
-  // const {
-  //   isFetching,
-  //   didInvalidate,
-  //   books } = state.booksData || {
-  //   isFetching: true,
-  //   didInvalidate: false,
-  //   books: []
-  // };
-  //
-  // return {
-  //   isFetching,
-  //   didInvalidate,
-  //   books
-  // }
 };
 
 export default connect(mapStateToProps)(App);

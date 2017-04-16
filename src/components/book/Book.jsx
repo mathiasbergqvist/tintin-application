@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
 import Comments from '../comments/Comments';
 import './Book.css';
-import {getBook, updateBook} from '../../lib/dbService';
+import {connect} from 'react-redux';
 
 class Book extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      book: {},
       hasLike: false
     }
   }
 
   render() {
-    const {id, title, year, location, originalTitle, image, likes} = this.state.book;
+    const bookId = this.props.match.params.bookId;
+    const index = this.props.books.findIndex(book => book.id === Number(bookId));
+    const book = this.props.books[index];
+    const {id, title, year, location, originalTitle, image, likes} = book;
     return (
       <div>
         <div className="book-title-header text-center">
@@ -58,16 +60,6 @@ class Book extends Component {
 
   componentDidMount() {
     window.scrollTo(0,0);
-    const bookId = this.props.match.params.bookId;
-    getBook(bookId)
-      .then(book => {
-        this.setState({
-          book
-        });
-      })
-      .catch(e => {
-        throw new Error(`Error from getBook: ${e}`)
-      });
   }
 
   getButtonAppearance() {
@@ -79,14 +71,20 @@ class Book extends Component {
     }
   }
 
-  handleLike() {
-    const updatedBook = {...this.state.book, likes: this.state.book.likes+1};
-    this.setState({
-      hasLike: true,
-      book: updatedBook
-    });
-    updateBook(updatedBook);
-  }
+  // handleLike() {
+  //   const updatedBook = {...this.state.book, likes: this.state.book.likes+1};
+  //   this.setState({
+  //     hasLike: true,
+  //     book: updatedBook
+  //   });
+  //   updateBook(updatedBook);
+  // }
 }
 
-export default Book;
+const mapStateToProps = (state) => {
+  return {
+    books: state.booksData.books
+  }
+};
+
+export default connect(mapStateToProps)(Book);

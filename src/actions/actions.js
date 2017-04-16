@@ -21,7 +21,6 @@ function fetchBooks() {
 }
 
 function shouldFetchBooks(state) {
-  console.log("shouldFetchBooks", state);
   if (state.booksData.books.length === 0) {
     return true;
   } else if (state.booksData.isFetching) {
