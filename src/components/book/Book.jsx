@@ -9,26 +9,8 @@ class Book extends Component {
     super(props);
     this.state = {
       book: {},
-      hasLike: false,
+      hasLike: false
     }
-  }
-
-  getButtonAppearance() {
-    if(this.state.hasLike) {
-      return "btn-success btn-lg";
-    }
-    else {
-      return "btn-primary btn-lg";
-    }
-  }
-
-  handleLike() {
-    const updatedBook = {...this.state.book, likes: this.state.book.likes+1};
-    this.setState({
-      hasLike: true,
-      book: updatedBook
-    });
-    updateBook(updatedBook);
   }
 
   render() {
@@ -42,7 +24,7 @@ class Book extends Component {
         <div className="container text-center">
           <figure className="figure">
             <img src={image} className="figure-img img-fluid rounded cover-art" alt="Cover art"/>
-            <figcaption class="figure-caption">
+            <figcaption className="figure-caption">
             </figcaption>
           </figure>
           <table className="table table-bordered">
@@ -75,6 +57,7 @@ class Book extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0,0);
     const bookId = this.props.match.params.bookId;
     getBook(bookId)
       .then(book => {
@@ -85,6 +68,24 @@ class Book extends Component {
       .catch(e => {
         throw new Error(`Error from getBook: ${e}`)
       });
+  }
+
+  getButtonAppearance() {
+    if(this.state.hasLike) {
+      return "btn-success btn-lg";
+    }
+    else {
+      return "btn-primary btn-lg";
+    }
+  }
+
+  handleLike() {
+    const updatedBook = {...this.state.book, likes: this.state.book.likes+1};
+    this.setState({
+      hasLike: true,
+      book: updatedBook
+    });
+    updateBook(updatedBook);
   }
 }
 

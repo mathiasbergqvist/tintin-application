@@ -1,0 +1,4 @@
+export const REQUEST_BOOKS = 'REQUEST_BOOK';
+export const RECEIVE_BOOKS = 'RECEIVE_BOOK';
+export const INCREMENT_LIKE = 'INCREMENT_LIKE';
+export const ADD_COMMENT = 'ADD_COMMENT';

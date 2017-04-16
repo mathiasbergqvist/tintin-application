@@ -28,7 +28,7 @@
       "originalTitle": "Tintin en Amérique",
       "thumbnail": "https://c2.staticflickr.com/6/5614/15362593618_e0a15d8899_t.jpg",
       "image": "https://c2.staticflickr.com/6/5614/15362593618_e0a15d8899_n.jpg",
-      "likes": 5
+      "likes": 6
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "originalTitle": "Les Cigares du pharaon",
       "thumbnail": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_t.jpg",
       "image": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_n.jpg",
-      "likes": 4
+      "likes": 5
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "originalTitle": "Le Lotus bleu",
       "thumbnail": "https://c2.staticflickr.com/2/1246/708767740_51c6c2fc61_t.jpg",
       "image": "https://c2.staticflickr.com/2/1246/708767740_51c6c2fc61_m.jpg",
-      "likes": 5
+      "likes": 6
     },
     {
       "id": 6,
@@ -69,6 +69,26 @@
       "thumbnail": "https://c2.staticflickr.com/2/1005/708767758_94674344ba_t.jpg",
       "image": "https://c2.staticflickr.com/2/1005/708767758_94674344ba_m.jpg",
       "likes": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "bookId": "1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "user": "Haddock"
+    },
+    {
+      "id": 2,
+      "bookId": 4,
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "user": "Tintin"
+    },
+    {
+      "id": 3,
+      "bookId": 4,
+      "text": "Mauris tincidunt, arcu vitae venenatis posuere, quam est accumsan urna, a tempus ipsum erat quis enim.",
+      "user": "Haddock"
     }
   ]
 }

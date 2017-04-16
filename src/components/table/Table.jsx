@@ -1,9 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Table.css';
+import ListedBook from '../ListedBook';
 
-const Table = (props) => {
-
+const Table = (books) => {
+  console.log("Books in table", books);
   return (
     <div className="container">
       <table className="table">
@@ -15,20 +16,11 @@ const Table = (props) => {
         </tr>
         </thead>
         <tbody>
-        {props.books.map((book, id) => (
-          <tr key={id} className="item-row">
-            <td>
-              <img src={book.thumbnail} alt=""/>
-            </td>
-            <td>
-              <Link to={`book/${book.id}`}>
-                <p>{book.title}</p>
-              </Link>
-            </td>
-            <td>
-              <p>{book.year}</p>
-            </td>
-          </tr>
+        {books.books.map((book, id) => (
+          <ListedBook
+            key={id}
+            {...book}
+          />
         ))}
         </tbody>
       </table>
