@@ -1,5 +1,5 @@
 .book-title-header {
-  background-color: #000000;
+  background-color: #000;
   height: 170px;
   width: 100%;
   padding: 20px;
@@ -25,7 +25,7 @@ td.display-bold {
 }
 
 img.cover-art {
-  box-shadow: 3px 3px 3px #888888;
+  box-shadow: 3px 3px 3px #888;
 }
 
 span.button-icon {
