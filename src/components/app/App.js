@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Table from '../table/Table';
-import './App.css';
 import {connect} from 'react-redux'
 import {fetchBooksIfNeeded} from '../../actions/bookActions';
+import './App.css';
 
 class App extends Component {
 
@@ -24,18 +24,6 @@ class App extends Component {
       </div>
     );
   }
-
-  componentDidMount() {
-    const {dispatch} = this.props;
-    dispatch(fetchBooksIfNeeded());
-  }
-
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.booksData !== prevProps.booksData()) {
-  //     const { dispatch } = this.props;
-  //     dispatch(fetchBooksIfNeeded());
-  //   }
-  // }
 
   getTable() {
     const {isFetching, books} = this.props.booksData;

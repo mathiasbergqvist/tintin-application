@@ -7,11 +7,22 @@ import {
   Route,
 } from 'react-router-dom';
 import {Provider} from 'react-redux';
-
+import {fetchCommentsIfNeeded} from '../actions/commentsActions';
+import {fetchBooksIfNeeded} from '../actions/bookActions';
 const store = configureStore();
 
 export default class Root extends Component {
   render() {
+    
+    
+    store.dispatch(fetchBooksIfNeeded())
+      .then(() => {
+        console.log("Store in root: ", store.get());
+      });
+    store.dispatch(fetchCommentsIfNeeded()).then(() => {
+      console.log("Store in root: ", store.get());
+    });
+
     return (
       <Provider store={store}>
         <Router>

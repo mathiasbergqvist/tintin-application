@@ -4,7 +4,7 @@ import {
   REQUEST_ADD_COMMENT,
   RECEIVE_ADD_COMMENT
 } from './actionTypes';
-import {loadComments, addComment} from '../lib/dbService';
+import {loadComments, addCommentToDb} from '../lib/dbService';
 
 
 export function fetchCommentsIfNeeded() {
@@ -20,7 +20,7 @@ export function fetchCommentsIfNeeded() {
 export function addComment(text, user, bookId) {
   return (dispatch) => {
     dispatch(requestAddComment());
-    return addComment({text, user, bookId})
+    return addCommentToDb({text, user, bookId})
       .then(comment => {
         dispatch(receiveAddComment(comment));
       })
@@ -31,6 +31,7 @@ export function addComment(text, user, bookId) {
 }
 
 function shouldFetchComments(state) {
+  console.log("shouldFetchComments", state);
   if (state.commentsData.comments.length === 0) {
     return true;
   } else if (state.commentsData.isFetching) {

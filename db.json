@@ -38,7 +38,7 @@
       "originalTitle": "Les Cigares du pharaon",
       "thumbnail": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_t.jpg",
       "image": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_n.jpg",
-      "likes": 5
+      "likes": 6
     },
     {
       "id": 5,
@@ -89,6 +89,12 @@
       "bookId": 4,
       "text": "Mauris tincidunt, arcu vitae venenatis posuere, quam est accumsan urna, a tempus ipsum erat quis enim.",
       "user": "Haddock"
+    },
+    {
+      "text": "foo",
+      "user": "bar",
+      "bookId": 1,
+      "id": 4
     }
   ]
 }

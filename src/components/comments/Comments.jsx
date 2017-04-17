@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
+import {addComment} from '../../actions/commentsActions';
+import {connect} from 'react-redux';
 import './Comments.css';
-import {getCommentsFromBookId} from '../../lib/dbService';
 
 class Comments extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      comments: []
-    }
+    this.onAddComment = this.onAddComment.bind(this);
   }
 
   render() {
@@ -21,7 +20,7 @@ class Comments extends Component {
             <label htmlFor="comment">Kommentar:</label>
             <textarea id="comment" className="form-control" rows="4"></textarea>
           </div>
-          <Button bsStyle="primary">Kommentera</Button>
+          <Button bsStyle="primary" onClick={e => this.onAddComment("foo", "bar", 1)}>Kommentera</Button>
         </form>
         <div className="user-comments text-center">
         </div>
@@ -29,20 +28,23 @@ class Comments extends Component {
     );
   }
 
-  componentDidMount() {
-    console.log("path id", this.props.match.params.bookId);
-    console.log("bookId", this.props.bookId);
-    getCommentsFromBookId(this.props.bookId)
-      .then(comments => {
-        console.log("COMMENTS", comments);
-        this.setState({
-          comments
-        });
-      })
-      .catch(e => {
-        throw new Error(`Error from getCommentsFromBookId: ${e}`);
-      });
+  onAddComment(user, text, bookId) {
+    this.props.handleAddComment(user, text, bookId);
   }
 }
 
-export default Comments;
+const mapStateToProps = (state) => {
+  return {
+    commentsData: state.commentsData
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleAddComment: (user, text, bookId) => {
+      dispatch(addComment(user, text, bookId));
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Comments);

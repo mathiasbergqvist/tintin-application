@@ -22,7 +22,7 @@ export const loadComments = () => {
     .then(res => res.json());
 };
 
-export const addComment = (comment) => {
+export const addCommentToDb = (comment) => {
   return fetch(BASE_URL_COMMENTS, {
     method: 'POST',
     headers: {
