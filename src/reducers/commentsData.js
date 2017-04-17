@@ -40,7 +40,7 @@ function commentsData(state = initialState, action) {
         didInvalidate: false,
         comments: [
           ...state.comments,
-          ...action.payload.comment
+          action.payload.comment
         ],
         lastUpdated: action.payload.receivedAt
       };

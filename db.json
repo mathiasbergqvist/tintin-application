@@ -38,7 +38,7 @@
       "originalTitle": "Les Cigares du pharaon",
       "thumbnail": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_t.jpg",
       "image": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_n.jpg",
-      "likes": 6
+      "likes": 8
     },
     {
       "id": 5,
@@ -74,27 +74,57 @@
   "comments": [
     {
       "id": 1,
-      "bookId": 1,
+      "bookId": "1",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "user": "Haddock"
     },
     {
       "id": 2,
-      "bookId": 4,
+      "bookId": "4",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "user": "Tintin"
     },
     {
       "id": 3,
-      "bookId": 4,
+      "bookId": "4",
       "text": "Mauris tincidunt, arcu vitae venenatis posuere, quam est accumsan urna, a tempus ipsum erat quis enim.",
       "user": "Haddock"
     },
     {
-      "text": "foo",
-      "user": "bar",
-      "bookId": 1,
+      "bookId": "4",
+      "text": "Voff",
+      "user": "Milou",
       "id": 4
+    },
+    {
+      "bookId": "4",
+      "text": "Foobar",
+      "user": "Mathias",
+      "id": 5
+    },
+    {
+      "bookId": "7",
+      "text": "Voff",
+      "user": "Milou",
+      "id": 6
+    },
+    {
+      "bookId": "7",
+      "text": "Adventure",
+      "user": "Tintin",
+      "id": 7
+    },
+    {
+      "bookId": "7",
+      "text": "Bomber",
+      "user": "Haddock",
+      "id": 8
+    },
+    {
+      "bookId": "1",
+      "text": "Bomber och granater",
+      "user": "Hadock",
+      "id": 9
     }
   ]
 }

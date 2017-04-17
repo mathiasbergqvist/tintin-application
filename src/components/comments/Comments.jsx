@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CommentsBox from '../comments-box/CommentsBox';
+import {simpleInputValidation} from './CommentsHelpers';
 import {Button} from 'react-bootstrap';
 import {addComment} from '../../actions/commentsActions';
 import {connect} from 'react-redux';
@@ -9,29 +10,64 @@ class Comments extends Component {
 
   constructor(props) {
     super(props);
-    this.onAddComment = this.onAddComment.bind(this);
+    this.state = {
+      author: "",
+      comment: ""
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleAuthorChange = this.handleAuthorChange.bind(this);
+    this.handleCommentChange = this.handleCommentChange.bind(this);
   }
 
   render() {
     const bookId = this.props.bookId;
-    const commentsForBook = this.props.commentsData.comments.filter(comment => comment.bookId === Number(bookId));
+    const commentsForBook = this.props.commentsData.comments.filter(comment => comment.bookId === bookId);
     return (
       <div className="comments container">
-        <h3>Kommentarer</h3>
-        <form>
+        <h2>Kommentarer</h2>
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="author">Namn:</label>
+            <input id="author"
+                   type="text"
+                   className="form-control"
+                   value={this.state.author}
+                   onChange={this.handleAuthorChange} required/>
+          </div>
           <div className="form-group">
             <label htmlFor="comment">Kommentar:</label>
-            <textarea id="comment" className="form-control" rows="4"></textarea>
+            <textarea id="comment"
+                      className="form-control"
+                      rows="4"
+                      value={this.state.comment}
+                      onChange={this.handleCommentChange} required/>
           </div>
-          <Button bsStyle="primary" onClick={e => this.onAddComment("foo", "bar", 1)}>Kommentera</Button>
+          <Button type="submit" bsStyle="primary">Kommentera</Button>
         </form>
         {this.getCommentsbox(commentsForBook)}
       </div>
     );
   }
 
-  onAddComment(user, text, bookId) {
-    this.props.handleAddComment(user, text, bookId);
+  handleSubmit(e) {
+    e.preventDefault();
+    if(simpleInputValidation(this.state.author) && simpleInputValidation(this.state.comment)){
+      this.props.handleAddComment(this.state.author, this.state.comment, this.props.bookId);
+    } else {
+     alert("Invalid from input!");
+    }
+  }
+
+  handleAuthorChange(e) {
+    this.setState({
+      author: e.target.value
+    });
+  }
+
+  handleCommentChange(e) {
+    this.setState({
+      comment: e.target.value
+    });
   }
 
   getCommentsbox(commentsForBook) {
@@ -62,8 +98,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleAddComment: (user, text, bookId) => {
-      dispatch(addComment(user, text, bookId));
+    handleAddComment: (author, comment, bookId) => {
+      dispatch(addComment(author, comment, bookId));
     }
   }
 };

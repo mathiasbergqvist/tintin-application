@@ -17,10 +17,10 @@ export function fetchCommentsIfNeeded() {
   }
 }
 
-export function addComment(text, user, bookId) {
+export function addComment(author, comment, bookId) {
   return (dispatch) => {
     dispatch(requestAddComment());
-    return addCommentToDb({text, user, bookId})
+    return addCommentToDb({bookId: bookId, text: comment, user: author})
       .then(comment => {
         dispatch(receiveAddComment(comment));
       })
