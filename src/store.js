@@ -9,7 +9,11 @@ const defaultState = {
     didInvalidate: false,
     books: []
   },
-  comments: []
+  commentsData: {
+    isFetching: false,
+    didInvalidate: false,
+    comments: []
+  }
 };
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

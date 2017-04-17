@@ -6,16 +6,14 @@ import {
 } from './actionTypes';
 import {loadComments, addComment} from '../lib/dbService';
 
-export function fetchComments() {
-  return (dispatch) => {
-    dispatch(requestComment());
-    return loadComments()
-      .then(comments => {
-        dispatch(receiveComments(comments));
-      })
-      .catch(e => {
-        throw new Error(`Error from loadBooks: ${e}`)
-      });
+
+export function fetchCommentsIfNeeded() {
+  return (dispatch, getState) => {
+    if (shouldFetchComments(getState())) {
+      return dispatch(fetchComments());
+    } else {
+      return Promise.resolve();
+    }
   }
 }
 
@@ -32,21 +30,26 @@ export function addComment(text, user, bookId) {
   }
 }
 
-function requestAddComment() {
-  console.log("REQUEST ADD COMMENT");
-  return {
-    type: REQUEST_ADD_COMMENT
+function shouldFetchComments(state) {
+  if (state.commentsData.comments.length === 0) {
+    return true;
+  } else if (state.commentsData.isFetching) {
+    return false;
+  } else {
+    return state.commentsData.didInvalidate;
   }
 }
 
-function receiveAddComment(comment) {
-  console.log("RECEIVE ADD COMMENT");
-  return {
-    type: RECEIVE_ADD_COMMENT,
-    payload: {
-      comment,
-      receivedAt: Date.now()
-    }
+function fetchComments() {
+  return (dispatch) => {
+    dispatch(requestComment());
+    return loadComments()
+      .then(comments => {
+        dispatch(receiveComments(comments));
+      })
+      .catch(e => {
+        throw new Error(`Error from loadBooks: ${e}`)
+      });
   }
 }
 
@@ -63,6 +66,24 @@ function receiveComments(comments) {
     type: RECEIVE_COMMENTS,
     payload: {
       comments,
+      receivedAt: Date.now()
+    }
+  }
+}
+
+function requestAddComment() {
+  console.log("REQUEST ADD COMMENT");
+  return {
+    type: REQUEST_ADD_COMMENT
+  }
+}
+
+function receiveAddComment(comment) {
+  console.log("RECEIVE ADD COMMENT");
+  return {
+    type: RECEIVE_ADD_COMMENT,
+    payload: {
+      comment,
       receivedAt: Date.now()
     }
   }
