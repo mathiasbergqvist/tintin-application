@@ -8,7 +8,7 @@
       "originalTitle": "Tintin au pays des Soviets",
       "thumbnail": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_t.jpg",
       "image": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_n.jpg",
-      "likes": 1
+      "likes": 2
     },
     {
       "id": 2,
@@ -125,6 +125,18 @@
       "text": "Bomber och granater",
       "user": "Hadock",
       "id": 9
+    },
+    {
+      "bookId": "1",
+      "text": "Juveler",
+      "user": "Castafiore",
+      "id": 10
+    },
+    {
+      "bookId": "1",
+      "text": "Rackman",
+      "user": "Mathias",
+      "id": 11
     }
   ]
 }
