@@ -6,11 +6,6 @@ export const loadBooks = () => {
     .then(res => res.json());
 };
 
-export const getBook = (id) => {
-  return fetch(`${BASE_URL_BOOKS}/${id}`)
-    .then(res => res.json());
-};
-
 export const updateBook = (book) => {
   return fetch(`${BASE_URL_BOOKS}/${book.id}`, {
     method: 'PUT',
@@ -22,12 +17,20 @@ export const updateBook = (book) => {
   }).then(res => res.json());
 };
 
-export const getCommentsFromBookId = (bookId) => {
-  return fetch(`${BASE_URL_COMMENTS}?bookId=${bookId}`)
-    .then(res => {
-      console.log(`${BASE_URL_COMMENTS}?bookId=${bookId}`, res.json);
-      res.json()
-    });
+export const loadComments = () => {
+  return fetch(BASE_URL_COMMENTS)
+    .then(res => res.json());
+};
+
+export const addComment = (comment) => {
+  return fetch(BASE_URL_COMMENTS, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(comment)
+  }).then(res => res.json());
 };
 
 

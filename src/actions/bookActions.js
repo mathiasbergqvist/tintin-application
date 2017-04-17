@@ -2,9 +2,9 @@ import {
   REQUEST_BOOKS,
   RECEIVE_BOOKS,
   REQUEST_INCREMENT_LIKE,
-  RECEIVE_INCREMENT_LIKE,
-  ADD_COMMENT
+  RECEIVE_INCREMENT_LIKE
 } from './actionTypes';
+import {increment} from './actionHelpers';
 import {loadBooks, updateBook} from '../lib/dbService';
 
 export function incrementLikes(index, book) {
@@ -30,18 +30,6 @@ export function fetchBooksIfNeeded() {
   }
 }
 
-export function addComment(comment, author, bookId) {
-  console.log("ADD COMMENT");
-  return {
-    type: ADD_COMMENT,
-    payload: {
-      bookId,
-      comment,
-      author
-    }
-  }
-}
-
 function fetchBooks() {
   return (dispatch) => {
     dispatch(requestBooks());
@@ -53,10 +41,6 @@ function fetchBooks() {
         throw new Error(`Error from loadBooks: ${e}`)
       });
   }
-}
-
-function increment(book){
-  return {...book, likes: book.likes + 1}
 }
 
 function shouldFetchBooks(state) {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Table from '../table/Table';
 import './App.css';
 import {connect} from 'react-redux'
-import {fetchBooksIfNeeded} from '../../actions/actions';
+import {fetchBooksIfNeeded} from '../../actions/bookActions';
 
 class App extends Component {
 
