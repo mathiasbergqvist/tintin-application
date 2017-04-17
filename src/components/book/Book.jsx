@@ -13,7 +13,7 @@ class Book extends Component {
     return (
       <div>
         <BookDetails bookId={bookId}/>
-        <Comments />
+        <Comments bookId={bookId}/>
       </div>
     );
   }

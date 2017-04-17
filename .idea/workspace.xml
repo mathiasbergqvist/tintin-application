@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46068cdb-8516-479b-a370-236585487956" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.json" afterPath="$PROJECT_DIR$/db.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/commentsActions.js" afterPath="$PROJECT_DIR$/src/actions/commentsActions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Root.js" afterPath="$PROJECT_DIR$/src/components/Root.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/app/App.js" afterPath="$PROJECT_DIR$/src/components/app/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/book/Book.jsx" afterPath="$PROJECT_DIR$/src/components/book/Book.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comments/Comments.css" afterPath="$PROJECT_DIR$/src/components/comments/Comments.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/comments/Comments.jsx" afterPath="$PROJECT_DIR$/src/components/comments/Comments.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/dbService.js" afterPath="$PROJECT_DIR$/src/lib/dbService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/index.js" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
     </list>
     <ignored path="tintin-application.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,33 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Comments.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Comments.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/comments/Comments.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Root.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Root.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="513">
+              <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -70,8 +45,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+            <state relative-caret-position="504">
+              <caret line="43" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -79,25 +54,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store.js">
+      <file leaf-file-name="Book.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/book/Book.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="234">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding>
-                <element signature="e#0#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commentsActions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/commentsActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#117#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,10 +69,56 @@
       <file leaf-file-name="BookDetails.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/book-details/BookDetails.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="-18">
+              <caret line="19" column="70" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="70" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentsBox.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/comments-box/CommentsBox.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentsBox.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/comments-box/CommentsBox.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Root.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Root.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Table.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/table/Table.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/components/table/TableStyle.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/book/BookStyle.js" />
-        <option value="$PROJECT_DIR$/src/components/comments/Comments.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/reducers/booksReducer.js" />
@@ -173,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/components/book/Book.css" />
         <option value="$PROJECT_DIR$/src/components/book-details/BookDetails.css" />
         <option value="$PROJECT_DIR$/src/components/book-details/BookDetails.jsx" />
-        <option value="$PROJECT_DIR$/src/components/book/Book.jsx" />
         <option value="$PROJECT_DIR$/src/actions/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/actions/actionHelpers.js" />
         <option value="$PROJECT_DIR$/src/actions/bookActions.js" />
@@ -184,8 +191,12 @@
         <option value="$PROJECT_DIR$/src/lib/dbService.js" />
         <option value="$PROJECT_DIR$/src/actions/commentsActions.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Root.js" />
         <option value="$PROJECT_DIR$/src/components/app/App.js" />
+        <option value="$PROJECT_DIR$/src/components/comments/Comments.css" />
+        <option value="$PROJECT_DIR$/src/components/book/Book.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Root.js" />
+        <option value="$PROJECT_DIR$/src/components/comments-box/CommentsBox.jsx" />
+        <option value="$PROJECT_DIR$/src/components/comments-box/CommentsBox.css" />
         <option value="$PROJECT_DIR$/src/components/comments/Comments.jsx" />
       </list>
     </option>
@@ -362,6 +373,28 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="comments-box">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tintin-application">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="comments">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -465,7 +498,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="db&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/db.json&#10;app&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/app/App.js&#10;root&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/Root.js&#10;Book&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/book-details/BookDetails.jsx&#10;comment&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/reducers/commentsData.js&#10;comments&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/commentsActions.js&#10;comm&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/commentsActions.js&#10;com&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/commentsActions.js&#10;state&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/node_modules/acorn/src/state.js&#10;dbser&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/lib/dbService.js&#10;db.json&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/db.json&#10;actions&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/actions.js&#10;Table&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/table/Table.jsx&#10;App&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/app/App.js&#10;Liste&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/ListedBook.jsx&#10;pack&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/package.json&#10;package&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/package.json" />
+    <property name="SearchEverywhereHistoryKey" value="root&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/Root.js&#10;Book&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/book-details/BookDetails.jsx&#10;table&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/table/Table.jsx&#10;db&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/db.json&#10;app&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/app/App.js&#10;comment&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/reducers/commentsData.js&#10;comments&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/commentsActions.js&#10;comm&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/commentsActions.js&#10;com&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/commentsActions.js&#10;state&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/node_modules/acorn/src/state.js&#10;dbser&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/lib/dbService.js&#10;db.json&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/db.json&#10;actions&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/actions/actions.js&#10;Table&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/table/Table.jsx&#10;App&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/app/App.js&#10;Liste&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/src/components/ListedBook.jsx&#10;pack&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/package.json&#10;package&#9;FILE&#9;file:///Users/mathiasbergqvist/Documents/workspace/Web Workspace/op/opkoko-kapstaden/tintin-application/package.json" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
@@ -915,12 +948,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491853142213</updated>
-      <workItem from="1491853143869" duration="76198000" />
+      <workItem from="1491853143869" duration="77634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76198000" />
+    <option name="totallyTimeSpent" value="77634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1048,14 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/comments/Comments.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1106,31 +1131,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/table/Table.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/book/Book.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/book/Book.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,7 +1178,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1224,16 +1229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/book-details/BookDetails.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/commentsActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1249,7 +1244,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1264,10 +1259,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/comments/Comments.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/table/Table.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Root.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="387">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/comments-box/CommentsBox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/comments-box/CommentsBox.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/book-details/BookDetails.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="19" column="70" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/book/Book.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1276,8 +1335,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        <state relative-caret-position="504">
+          <caret line="43" column="5" selection-start-line="29" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1286,19 +1345,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/comments/Comments.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        <state relative-caret-position="513">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>

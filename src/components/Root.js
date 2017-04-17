@@ -13,14 +13,14 @@ const store = configureStore();
 
 export default class Root extends Component {
   render() {
-    
-    
+
+
     store.dispatch(fetchBooksIfNeeded())
       .then(() => {
-        console.log("Store in root: ", store.get());
+        console.log("Store in root: ", store);
       });
     store.dispatch(fetchCommentsIfNeeded()).then(() => {
-      console.log("Store in root: ", store.get());
+      console.log("Store in root: ", store);
     });
 
     return (
