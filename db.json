@@ -8,7 +8,7 @@
       "originalTitle": "Tintin au pays des Soviets",
       "thumbnail": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_t.jpg",
       "image": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_n.jpg",
-      "likes": 2
+      "likes": 3
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "location": "Kongo",
       "thumbnail": "https://c1.staticflickr.com/9/8778/17547677181_a12054015f_t.jpg",
       "image": "https://c1.staticflickr.com/9/8778/17547677181_a12054015f_m.jpg",
-      "likes": 8
+      "likes": 9
     },
     {
       "id": 3,
@@ -38,7 +38,7 @@
       "originalTitle": "Les Cigares du pharaon",
       "thumbnail": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_t.jpg",
       "image": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_n.jpg",
-      "likes": 8
+      "likes": 9
     },
     {
       "id": 5,
@@ -137,6 +137,12 @@
       "text": "Rackman",
       "user": "Mathias",
       "id": 11
+    },
+    {
+      "bookId": "2",
+      "text": "Nice",
+      "user": "Professor Kalkyl",
+      "id": 12
     }
   ]
 }

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import CommentsBox from '../comments-box/CommentsBox';
-import {simpleInputValidation} from './CommentsHelpers';
 import {Button} from 'react-bootstrap';
-import {addComment} from '../../actions/commentsActions';
 import {connect} from 'react-redux';
+import {addComment} from '../../actions/commentsActions';
+import CommentsBox from '../comments-box/CommentsBox';
+import simpleInputValidation from './CommentsHelpers';
 import './Comments.css';
 
 class Comments extends Component {

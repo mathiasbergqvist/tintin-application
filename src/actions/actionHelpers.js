@@ -1,3 +1,3 @@
-export function increment(book){
-  return {...book, likes: book.likes + 1}
+export default function increment(book) {
+  return { ...book, likes: book.likes + 1 };
 }

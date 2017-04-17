@@ -2,13 +2,13 @@ import {
   REQUEST_BOOKS,
   RECEIVE_BOOKS,
   REQUEST_INCREMENT_LIKE,
-  RECEIVE_INCREMENT_LIKE
+  RECEIVE_INCREMENT_LIKE,
 } from '../actions/actionTypes';
 
 const initialState = {
   isFetching: false,
   didInvalidate: false,
-  books: []
+  books: [],
 };
 
 function booksData(state = initialState, action) {
@@ -16,38 +16,37 @@ function booksData(state = initialState, action) {
     case REQUEST_BOOKS:
       return Object.assign({}, state, {
         isFetching: true,
-        didInvalidate: false
+        didInvalidate: false,
       });
     case RECEIVE_BOOKS:
       return Object.assign({}, state, {
         isFetching: false,
         didInvalidate: false,
         books: action.payload.books,
-        lastUpdated: action.payload.receivedAt
+        lastUpdated: action.payload.receivedAt,
       });
     case REQUEST_INCREMENT_LIKE:
       return Object.assign({}, state, {
         isFetching: true,
-        didInvalidate: false
+        didInvalidate: false,
       });
-    case RECEIVE_INCREMENT_LIKE:
+    case RECEIVE_INCREMENT_LIKE: // eslint-disable-line no-case-declarations
       const incrementedBookIndex = action.payload.index;
       const incrementedLikeBooks = [
         ...state.books.slice(0, incrementedBookIndex),
         action.payload.book,
-        ...state.books.slice(incrementedBookIndex + 1)
+        ...state.books.slice(incrementedBookIndex + 1),
       ];
       return {
         ...state,
         isFetching: false,
         didInvalidate: false,
         books: incrementedLikeBooks,
-        lastUpdated: action.payload.receivedAt
+        lastUpdated: action.payload.receivedAt,
       };
     default:
       return state;
   }
-  return state;
 }
 
 export default booksData;

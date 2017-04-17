@@ -2,13 +2,13 @@ import {
   REQUEST_COMMENTS,
   REQUEST_ADD_COMMENT,
   RECEIVE_COMMENTS,
-  RECEIVE_ADD_COMMENT
+  RECEIVE_ADD_COMMENT,
 } from '../actions/actionTypes';
 
 const initialState = {
   isFetching: false,
   didInvalidate: false,
-  comments: []
+  comments: [],
 };
 
 function commentsData(state = initialState, action) {
@@ -17,7 +17,7 @@ function commentsData(state = initialState, action) {
       return {
         ...state,
         isFetching: true,
-        didInvalidate: false
+        didInvalidate: false,
       };
     case RECEIVE_COMMENTS:
       return {
@@ -25,13 +25,13 @@ function commentsData(state = initialState, action) {
         isFetching: false,
         didInvalidate: false,
         comments: action.payload.comments,
-        lastUpdated: action.payload.receivedAt
+        lastUpdated: action.payload.receivedAt,
       };
     case REQUEST_ADD_COMMENT:
       return {
         ...state,
         isFetching: true,
-        didInvalidate: false
+        didInvalidate: false,
       };
     case RECEIVE_ADD_COMMENT:
       return {
@@ -40,9 +40,9 @@ function commentsData(state = initialState, action) {
         didInvalidate: false,
         comments: [
           ...state.comments,
-          action.payload.comment
+          action.payload.comment,
         ],
-        lastUpdated: action.payload.receivedAt
+        lastUpdated: action.payload.receivedAt,
       };
     default:
       return state;

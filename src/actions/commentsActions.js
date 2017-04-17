@@ -2,90 +2,88 @@ import {
   REQUEST_COMMENTS,
   RECEIVE_COMMENTS,
   REQUEST_ADD_COMMENT,
-  RECEIVE_ADD_COMMENT
+  RECEIVE_ADD_COMMENT,
 } from './actionTypes';
-import {loadComments, addCommentToDb} from '../lib/dbService';
+import { loadComments, addCommentToDb } from '../lib/dbService';
 
 
-export function fetchCommentsIfNeeded() {
-  return (dispatch, getState) => {
-    if (shouldFetchComments(getState())) {
-      return dispatch(fetchComments());
-    } else {
-      return Promise.resolve();
-    }
-  }
+function requestComment() {
+  console.log('REQUEST COMMENTS');
+  return {
+    type: REQUEST_COMMENTS,
+  };
 }
 
-export function addComment(author, comment, bookId) {
-  return (dispatch) => {
-    dispatch(requestAddComment());
-    return addCommentToDb({bookId: bookId, text: comment, user: author})
-      .then(comment => {
-        dispatch(receiveAddComment(comment));
-      })
-      .catch(e => {
-        throw new Error(`Error from addComment: ${e}`);
-      });
-  }
+function receiveComments(comments) {
+  console.log('RECEIVE COMMENTS');
+  return {
+    type: RECEIVE_COMMENTS,
+    payload: {
+      comments,
+      receivedAt: Date.now(),
+    },
+  };
 }
 
 function shouldFetchComments(state) {
-  console.log("shouldFetchComments", state);
+  console.log('shouldFetchComments', state);
   if (state.commentsData.comments.length === 0) {
     return true;
   } else if (state.commentsData.isFetching) {
     return false;
-  } else {
-    return state.commentsData.didInvalidate;
   }
+  return state.commentsData.didInvalidate;
 }
 
 function fetchComments() {
   return (dispatch) => {
     dispatch(requestComment());
     return loadComments()
-      .then(comments => {
+      .then((comments) => {
         dispatch(receiveComments(comments));
       })
-      .catch(e => {
-        throw new Error(`Error from loadBooks: ${e}`)
+      .catch((e) => {
+        throw new Error(`Error from loadBooks: ${e}`);
       });
-  }
+  };
 }
 
-function requestComment() {
-  console.log("REQUEST COMMENTS");
-  return {
-    type: REQUEST_COMMENTS
-  }
-}
-
-function receiveComments(comments) {
-  console.log("RECEIVE COMMENTS");
-  return {
-    type: RECEIVE_COMMENTS,
-    payload: {
-      comments,
-      receivedAt: Date.now()
+export function fetchCommentsIfNeeded() {
+  return (dispatch, getState) => {
+    if (shouldFetchComments(getState())) {
+      return dispatch(fetchComments());
     }
-  }
+    return Promise.resolve();
+  };
 }
 
 function requestAddComment() {
-  console.log("REQUEST ADD COMMENT");
+  console.log('REQUEST ADD COMMENT');
   return {
-    type: REQUEST_ADD_COMMENT
-  }
+    type: REQUEST_ADD_COMMENT,
+  };
 }
 
 function receiveAddComment(comment) {
-  console.log("RECEIVE ADD COMMENT");
+  console.log('RECEIVE ADD COMMENT');
   return {
     type: RECEIVE_ADD_COMMENT,
     payload: {
       comment,
-      receivedAt: Date.now()
-    }
-  }
+      receivedAt: Date.now(),
+    },
+  };
+}
+
+export function addComment(author, comment, bookId) {
+  return (dispatch) => {
+    dispatch(requestAddComment());
+    return addCommentToDb({ bookId, text: comment, user: author })
+      .then((commentAdded) => {
+        dispatch(receiveAddComment(commentAdded));
+      })
+      .catch((e) => {
+        throw new Error(`Error from addComment: ${e}`);
+      });
+  };
 }
