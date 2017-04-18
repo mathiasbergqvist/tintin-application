@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import commentsData from './commentsData';
-import booksData from './booksData';
+import commentsData from './comments/commentsData';
+import booksData from './books/booksData';
 
 const rootReducer = combineReducers({
   booksData,

@@ -3,7 +3,7 @@ import {
   REQUEST_ADD_COMMENT,
   RECEIVE_COMMENTS,
   RECEIVE_ADD_COMMENT,
-} from '../actions/actionTypes';
+} from '../../actions/actionTypes';
 import addComment from './commentsReducerHelper';
 
 const initialState = {

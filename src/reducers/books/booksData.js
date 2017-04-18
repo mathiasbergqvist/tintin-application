@@ -3,7 +3,7 @@ import {
   RECEIVE_BOOKS,
   REQUEST_INCREMENT_LIKE,
   RECEIVE_INCREMENT_LIKE,
-} from '../actions/actionTypes';
+} from '../../actions/actionTypes';
 import getBooksWithIncrementedLike from './bookReducerHelpers';
 
 const initialState = {

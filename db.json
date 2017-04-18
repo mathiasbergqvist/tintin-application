@@ -8,7 +8,7 @@
       "originalTitle": "Tintin au pays des Soviets",
       "thumbnail": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_t.jpg",
       "image": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_n.jpg",
-      "likes": 3
+      "likes": 4
     },
     {
       "id": 2,
@@ -161,6 +161,12 @@
       "text": "Foo bar",
       "user": "Mathias",
       "id": 15
+    },
+    {
+      "bookId": "1",
+      "text": "Sovjet rockar",
+      "user": "Putin",
+      "id": 16
     }
   ]
 }

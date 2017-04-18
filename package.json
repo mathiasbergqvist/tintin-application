@@ -26,6 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --watch",
+    "test-all": "jest",
     "eject": "react-scripts eject",
     "eslint": "eslint --cache --fix ./",
     "stylelint": "stylelint '**/*.css'"
