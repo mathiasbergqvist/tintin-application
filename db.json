@@ -58,7 +58,7 @@
       "originalTitle": "L'Oreille cassée",
       "thumbnail": "https://c2.staticflickr.com/2/1132/708767720_c37a49eda8_t.jpg",
       "image": "https://c2.staticflickr.com/2/1132/708767720_c37a49eda8_m.jpg",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": 7,
@@ -149,6 +149,18 @@
       "text": "Gastkramande",
       "user": "Rastapopolus",
       "id": 13
+    },
+    {
+      "bookId": "6",
+      "text": "Test",
+      "user": "Mathias",
+      "id": 14
+    },
+    {
+      "bookId": "6",
+      "text": "Foo bar",
+      "user": "Mathias",
+      "id": 15
     }
   ]
 }

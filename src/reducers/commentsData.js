@@ -4,6 +4,7 @@ import {
   RECEIVE_COMMENTS,
   RECEIVE_ADD_COMMENT,
 } from '../actions/actionTypes';
+import addComment from './commentsReducerHelper';
 
 const initialState = {
   isFetching: false,
@@ -38,10 +39,7 @@ function commentsData(state = initialState, action) {
         ...state,
         isFetching: false,
         didInvalidate: false,
-        comments: [
-          ...state.comments,
-          action.payload.comment,
-        ],
+        comments: addComment(state, action.payload.comment),
         lastUpdated: action.payload.receivedAt,
       };
     default:
