@@ -21,6 +21,7 @@ function receiveIncrementLike(index, book) {
     payload: {
       index,
       book,
+      receivedAt: Date.now(),
     },
   };
 }

@@ -8,6 +8,13 @@ import {
   RECEIVE_ADD_COMMENT,
 } from './actions/actionTypes';
 
+test('store should initialize with default state', () => {
+  const store = configureStore();
+  const actual = store.getState();
+  const defaultState = {"booksData": {"books": [], "didInvalidate": false, "isFetching": false}, "commentsData": {"comments": [], "didInvalidate": false, "isFetching": false}};
+  expect(actual).toEqual(defaultState);
+});
+
 test('store should handle dispatched REQUEST actions for comments and books', () => {
   const store = configureStore();
   const actions = [
