@@ -143,6 +143,12 @@
       "text": "Nice",
       "user": "Professor Kalkyl",
       "id": 12
+    },
+    {
+      "bookId": "5",
+      "text": "Gastkramande",
+      "user": "Rastapopolus",
+      "id": 13
     }
   ]
 }

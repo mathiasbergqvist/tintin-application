@@ -85,7 +85,9 @@ class Comments extends Component {
         <CommentsBox comments={commentsForBook}/>
       );
     } else {
-      <h3>Kunde inte ladda innehåll...</h3>
+      return(
+        <h3>Kunde inte ladda innehåll...</h3>
+      );
     }
   }
 }

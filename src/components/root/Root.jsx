@@ -4,11 +4,11 @@ import {
   Route,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { fetchCommentsIfNeeded } from '../actions/commentsActions';
-import { fetchBooksIfNeeded } from '../actions/bookActions';
-import App from './app/App.jsx';
-import Book from './book/Book';
-import configureStore from '../store';
+import { fetchCommentsIfNeeded } from '../../actions/commentsActions';
+import { fetchBooksIfNeeded } from '../../actions/bookActions';
+import App from '../app/App.jsx';
+import Book from '../book/Book';
+import configureStore from '../../store';
 
 const store = configureStore();
 

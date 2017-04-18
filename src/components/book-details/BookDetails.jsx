@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {incrementLike, incrementLikes} from '../../actions/bookActions';
+import {incrementLikes} from '../../actions/bookActions';
 import {connect} from 'react-redux';
 import './BookDetails.css';
 

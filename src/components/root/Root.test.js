@@ -2,9 +2,9 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app/App';
+import Root from './Root';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<Root />, div);
 });

@@ -19,8 +19,11 @@ class App extends Component {
       return (
         <Table books={books} />
       );
+    } else {
+      return (
+        <h2>Kunde inte ladda innehåll...</h2>
+      );
     }
-    <h2>Kunde inte ladda innehåll...</h2>;
   }
 
   render() {
