@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
 } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 import { Provider } from 'react-redux';
 import { fetchCommentsIfNeeded } from '../../actions/commentsActions';
 import { fetchBooksIfNeeded } from '../../actions/bookActions';
@@ -23,11 +24,14 @@ export default class Root extends Component {
       console.log('Store in root: ', store);
     });
 
+    const history = createBrowserHistory();
+
     return (
       <Provider store={store}>
-        <Router>
+        <Router history={history}>
           <div>
             <Route exact path="/" component={App} />
+            <Route exact path="/book" component={App} />
             <Route path="/book/:bookId" component={Book} />
           </div>
         </Router>

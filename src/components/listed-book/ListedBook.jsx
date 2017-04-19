@@ -14,7 +14,7 @@ class ListedBook extends Component {
   render() {
     const {id, title, year, thumbnail} = this.props;
     if(this.state.redirect){
-      return <Redirect to={`book/${id}`}/>
+      return <Redirect push to={`book/${id}`}/>
     }
     return (
       <tr className="item-row" onClick={() => this.handleOnClick(id)}>

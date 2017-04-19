@@ -12,6 +12,7 @@
     "stylelint-config-standard": "^16.0.0"
   },
   "dependencies": {
+    "history": "^4.6.1",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.5.4",
     "react-bootstrap": "^0.30.8",
