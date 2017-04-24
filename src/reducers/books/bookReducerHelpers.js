@@ -4,4 +4,4 @@ export default function getBooksWithIncrementedLike(bookIndex, book, application
     book,
     ...applicationState.books.slice(bookIndex + 1),
   ];
-};
+}
