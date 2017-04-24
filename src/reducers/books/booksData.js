@@ -32,7 +32,8 @@ function booksData(state = initialState, action) {
         didInvalidate: false,
       });
     case RECEIVE_INCREMENT_LIKE: // eslint-disable-line no-case-declarations
-      const incrementedLikeBooks = getBooksWithIncrementedLike(action.payload.index, action.payload.book, state);
+      const incrementedLikeBooks =
+        getBooksWithIncrementedLike(action.payload.index, action.payload.book, state);
       return {
         ...state,
         isFetching: false,

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import commentsData from './commentsData';
 import { REQUEST_COMMENTS, RECEIVE_COMMENTS, RECEIVE_ADD_COMMENT } from '../../actions/actionTypes';
 

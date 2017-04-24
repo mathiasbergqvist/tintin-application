@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import addComment from './commentsReducerHelper';
 
 test('add Comment should add comment to comments list', () => {

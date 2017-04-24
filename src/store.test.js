@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import configureStore from './store';
 import {
   REQUEST_BOOKS,
@@ -11,7 +12,18 @@ import {
 test('store should initialize with default state', () => {
   const store = configureStore();
   const actual = store.getState();
-  const defaultState = { booksData: { books: [], didInvalidate: false, isFetching: false }, commentsData: { comments: [], didInvalidate: false, isFetching: false } };
+  const defaultState = {
+    booksData: {
+      books: [],
+      didInvalidate: false,
+      isFetching: false,
+    },
+    commentsData: {
+      comments: [],
+      didInvalidate: false,
+      isFetching: false,
+    },
+  };
   expect(actual).toEqual(defaultState);
 });
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import booksData from './booksData';
 import { REQUEST_BOOKS, RECEIVE_BOOKS, RECEIVE_INCREMENT_LIKE } from '../../actions/actionTypes';
 

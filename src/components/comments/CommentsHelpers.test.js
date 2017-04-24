@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import simpleInputValidation from './CommentsHelpers';
 
 test('simpleInputValidation should return true for valid input', () => {

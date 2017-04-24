@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import getBooksWithIncrementedLike from './bookReducerHelpers';
 
 test('getBooksWithIncrementedLike should add book with incremented like at corresponding index', () => {

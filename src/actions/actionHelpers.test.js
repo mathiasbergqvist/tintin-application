@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import increment from './actionHelpers';
 
 test('increment should increment the likes value by 1', () => {
