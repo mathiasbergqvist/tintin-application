@@ -10,6 +10,8 @@
 /build
 
 # misc
+.eslintcache
+/.idea
 .DS_Store
 .env
 npm-debug.log*

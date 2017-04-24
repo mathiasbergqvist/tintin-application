@@ -23,13 +23,12 @@
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0"
   },
+  "config": {
+    "port": "3031"
+  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --silent --watch",
-    "test-all": "jest",
-    "eject": "react-scripts eject",
-    "eslint": "eslint --cache --fix ./",
-    "stylelint": "stylelint '**/*.css'"
+    "test": "react-scripts test --env=jsdom --silent",
+    "server": "json-server --watch -p $npm_package_config_port db.json"
   }
 }

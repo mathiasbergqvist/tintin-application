@@ -8,7 +8,7 @@
       "originalTitle": "Tintin au pays des Soviets",
       "thumbnail": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_t.jpg",
       "image": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_n.jpg",
-      "likes": 4
+      "likes": 5
     },
     {
       "id": 2,
@@ -38,7 +38,7 @@
       "originalTitle": "Les Cigares du pharaon",
       "thumbnail": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_t.jpg",
       "image": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_n.jpg",
-      "likes": 9
+      "likes": 10
     },
     {
       "id": 5,
@@ -167,6 +167,12 @@
       "text": "Sovjet rockar",
       "user": "Putin",
       "id": 16
+    },
+    {
+      "bookId": "4",
+      "text": "fooBar",
+      "user": "fooMan",
+      "id": 17
     }
   ]
 }
