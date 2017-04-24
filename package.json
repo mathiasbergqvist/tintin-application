@@ -36,10 +36,10 @@
     "cover": "npm test -- --coverage",
     "postcover": "open coverage/lcov-report/index.html",
     "lint": "npm-run-all lint:**",
-    "lint:js": "eslint --cache --fix ./src",
+    "lint:js": "eslint --fix ./src",
     "lint:css": "stylelint './src/*.css'",
     "lint:css:fix": "stylefmt -r ./src",
-    "precommit": "npm run lint",
+    "precommit": "npm run lint:js",
     "prepush": "npm run test"
   }
 }

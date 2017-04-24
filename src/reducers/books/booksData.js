@@ -13,7 +13,6 @@ const initialState = {
 };
 
 function booksData(state = initialState, action) {
-  var foo = true;
   switch (action.type) {
     case REQUEST_BOOKS:
       return Object.assign({}, state, {
