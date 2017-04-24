@@ -30,13 +30,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "server": "json-server --watch -p $npm_package_config_port db.json",
-    "pretest": "npm run lint",
     "test": "react-scripts test --env=jsdom --silent --watch",
-    "cover": "npm test -- --coverage",
-    "postcover": "open coverage/lcov-report/index.html",
-    "lint": "npm-run-all lint:**",
-    "lint:js": "eslint --cache --fix ./src",
-    "lint:css": "stylelint './src/*.css'",
-    "lint:css:fix": "stylefmt -r ./src"
+    "lint": "eslint --cache --fix ./src"
   }
 }
