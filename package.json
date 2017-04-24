@@ -31,7 +31,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "server": "json-server --watch -p $npm_package_config_port db.json",
-    "pretest": "npm run lint",
     "test": "react-scripts test --env=jsdom --silent --watch",
     "cover": "npm test -- --coverage",
     "postcover": "open coverage/lcov-report/index.html",
