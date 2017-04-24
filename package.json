@@ -33,8 +33,8 @@
     "test": "react-scripts test --env=jsdom --silent --watch",
     "lint:js": "eslint --cache --fix ./src",
     "lint:css": "stylelint './src/*.css'",
-    "lint:css:fix": "stylefmt -r ./src",
+    "lint:css:fix": "stylefmt -r ./src/*.css",
     "lint": "npm-run-all lint:**",
-    "test-and-lint": "npm-run-all test lint"
+    "test-and-lint": "npm-run-all --parallel test lint"
   }
 }
