@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "history": "^4.6.1",
+    "husky": "^0.13.3",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.5.4",
     "react-bootstrap": "^0.30.8",
@@ -37,6 +38,8 @@
     "lint": "npm-run-all lint:**",
     "lint:js": "eslint --cache --fix ./src",
     "lint:css": "stylelint './src/*.css'",
-    "lint:css:fix": "stylefmt -r ./src"
+    "lint:css:fix": "stylefmt -r ./src",
+    "precommit": "npm run lint",
+    "prepush": "npm run test"
   }
 }
