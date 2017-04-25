@@ -12,6 +12,7 @@
 # misc
 .eslintcache
 /.idea
+db.json
 .DS_Store
 .env
 npm-debug.log*

@@ -28,7 +28,7 @@
       "originalTitle": "Tintin en Amérique",
       "thumbnail": "https://c2.staticflickr.com/6/5614/15362593618_e0a15d8899_t.jpg",
       "image": "https://c2.staticflickr.com/6/5614/15362593618_e0a15d8899_n.jpg",
-      "likes": 6
+      "likes": 7
     },
     {
       "id": 4,
@@ -173,6 +173,12 @@
       "text": "fooBar",
       "user": "fooMan",
       "id": 17
+    },
+    {
+      "bookId": "3",
+      "text": "voff",
+      "user": "milou",
+      "id": 18
     }
   ]
 }
