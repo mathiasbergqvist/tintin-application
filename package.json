@@ -39,7 +39,6 @@
     "lint:js": "eslint --fix ./src",
     "lint:css": "stylelint './src/*.css'",
     "lint:css:fix": "stylefmt -r ./src",
-    "precommit": "npm run lint:js",
-    "prepush": "npm run test"
+    "precommit": "npm run lint:js"
   }
 }
