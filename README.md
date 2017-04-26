@@ -1,4 +1,4 @@
-# Tintin Applications
+# Tintin Application
 
 ## Introduction
 Example applications build as a support application for my presentation "Tips & Trix med npm scripts" in preparation for the business conference "OpKoKo" in Cape Town, South Africe 2017.
