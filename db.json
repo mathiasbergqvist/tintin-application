@@ -1,0 +1,248 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Tintin I Sovjet",
+      "year": "1930",
+      "location": "Sovjetunionen",
+      "originalTitle": "Tintin au pays des Soviets",
+      "thumbnail": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_t.jpg",
+      "image": "https://c2.staticflickr.com/4/3316/3184592173_9a5026f1c8_n.jpg",
+      "likes": 4
+    },
+    {
+      "id": 2,
+      "title": "Tintin I Kongo",
+      "year": "1931",
+      "originalTitle": "Tintin au Congo",
+      "location": "Kongo",
+      "thumbnail": "https://c1.staticflickr.com/9/8778/17547677181_a12054015f_t.jpg",
+      "image": "https://c1.staticflickr.com/9/8778/17547677181_a12054015f_m.jpg",
+      "likes": 9
+    },
+    {
+      "id": 3,
+      "title": "Tintin I Amerika",
+      "year": "1932",
+      "location": "USA",
+      "originalTitle": "Tintin en Amérique",
+      "thumbnail": "https://c2.staticflickr.com/6/5614/15362593618_e0a15d8899_t.jpg",
+      "image": "https://c2.staticflickr.com/6/5614/15362593618_e0a15d8899_n.jpg",
+      "likes": 6
+    },
+    {
+      "id": 4,
+      "title": "Faraos Cigarrer",
+      "year": "1934",
+      "location": "Egypten/Indien",
+      "originalTitle": "Les Cigares du pharaon",
+      "thumbnail": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_t.jpg",
+      "image": "https://c1.staticflickr.com/9/8100/8532684868_9a6b346765_n.jpg",
+      "likes": 9
+    },
+    {
+      "id": 5,
+      "title": "Blå Lotus",
+      "year": "1936",
+      "location": "Kina",
+      "originalTitle": "Le Lotus bleu",
+      "thumbnail": "https://c2.staticflickr.com/2/1246/708767740_51c6c2fc61_t.jpg",
+      "image": "https://c2.staticflickr.com/2/1246/708767740_51c6c2fc61_m.jpg",
+      "likes": 7
+    },
+    {
+      "id": 6,
+      "title": "Det Sönderslagna Örat",
+      "year": "1937",
+      "location": "Sydamerika",
+      "originalTitle": "L'Oreille cassée",
+      "thumbnail": "https://c2.staticflickr.com/2/1132/708767720_c37a49eda8_t.jpg",
+      "image": "https://c2.staticflickr.com/2/1132/708767720_c37a49eda8_m.jpg",
+      "likes": 3
+    },
+    {
+      "id": 7,
+      "title": "Den Svarta Ön",
+      "year": "1938",
+      "location": "Skottland",
+      "originalTitle": "L'Oreille cassée",
+      "thumbnail": "https://c2.staticflickr.com/2/1005/708767758_94674344ba_t.jpg",
+      "image": "https://c2.staticflickr.com/2/1005/708767758_94674344ba_m.jpg",
+      "likes": 2
+    },
+    {
+      "id": 8,
+      "title": "Kung Ottokars Spira",
+      "year": "1939",
+      "location": "Syldavien/Bordurien",
+      "originalTitle": "Le Sceptre d'Ottokar",
+      "thumbnail": "https://c1.staticflickr.com/1/496/19732412230_604f89eec2_t.jpg",
+      "image": "https://c1.staticflickr.com/1/496/19732412230_604f89eec2_n.jpg",
+      "likes": 1
+    },
+    {
+      "id": 9,
+      "title": "Krabban Med Guldklorna",
+      "year": "1941",
+      "location": "Marocko",
+      "originalTitle": "Le Crabe aux Pinces d'Or",
+      "thumbnail": "https://c2.staticflickr.com/6/5609/15363086100_e5849f4a6a_t.jpg",
+      "image": "https://c2.staticflickr.com/6/5609/15363086100_e5849f4a6a_n.jpg",
+      "likes": 0
+    },
+    {
+      "id": 10,
+      "title": "Den Mystiska Stjärnan",
+      "year": "1942",
+      "location": "Island",
+      "originalTitle": "L'Étoile mystérieuse",
+      "thumbnail": "https://c2.staticflickr.com/4/3596/3612862847_afe52233c2_t.jpg",
+      "image": "https://c2.staticflickr.com/4/3596/3612862847_afe52233c2_m.jpg",
+      "likes": 0
+    },
+    {
+      "id": 11,
+      "title": "Enhörningens Hemlighet",
+      "year": "1943",
+      "location": "Belgien",
+      "originalTitle": "Le Secret de la Licorne",
+      "thumbnail": "https://c2.staticflickr.com/4/3467/3223856433_91af65d74c_t.jpg",
+      "image": "https://c2.staticflickr.com/4/3467/3223856433_91af65d74c_m.jpg",
+      "likes": 0
+    },
+    {
+      "id": 12,
+      "title": "Rackman Den Rödes Skatt",
+      "year": "1944",
+      "location": "Caicosöarna",
+      "originalTitle": "Le Trésor de Rackham le Rouge",
+      "thumbnail": "https://c2.staticflickr.com/4/3405/3224713608_336652362d_t.jpg",
+      "image": "https://c2.staticflickr.com/4/3405/3224713608_336652362d_m.jpg",
+      "likes": 0
+    },
+    {
+      "id": 13,
+      "title": "De Sju Kristallkulorna",
+      "year": "1948",
+      "location": "Belgien",
+      "originalTitle": "Les Sept boules de cristal",
+      "thumbnail": "https://c1.staticflickr.com/9/8152/7536712766_e3bdeebb6f_t.jpg",
+      "image": "https://c1.staticflickr.com/9/8152/7536712766_e3bdeebb6f_n.jpg",
+      "likes": 0
+    },
+    {
+      "id": 14,
+      "title": "Solens Tempel",
+      "year": "1949",
+      "location": "Peru",
+      "originalTitle": "Le Temple du Soleil",
+      "thumbnail": "https://c1.staticflickr.com/9/8587/15583466148_79b8d8891b_t.jpg",
+      "image": "https://c1.staticflickr.com/9/8587/15583466148_79b8d8891b_n.jpg",
+      "likes": 0
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "bookId": "1",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "user": "Haddock"
+    },
+    {
+      "id": 2,
+      "bookId": "4",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "user": "Tintin"
+    },
+    {
+      "id": 3,
+      "bookId": "4",
+      "text": "Mauris tincidunt, arcu vitae venenatis posuere, quam est accumsan urna, a tempus ipsum erat quis enim.",
+      "user": "Haddock"
+    },
+    {
+      "bookId": "4",
+      "text": "Voff",
+      "user": "Milou",
+      "id": 4
+    },
+    {
+      "bookId": "4",
+      "text": "Foobar",
+      "user": "Mathias",
+      "id": 5
+    },
+    {
+      "bookId": "7",
+      "text": "Voff",
+      "user": "Milou",
+      "id": 6
+    },
+    {
+      "bookId": "7",
+      "text": "Adventure",
+      "user": "Tintin",
+      "id": 7
+    },
+    {
+      "bookId": "7",
+      "text": "Bomber",
+      "user": "Haddock",
+      "id": 8
+    },
+    {
+      "bookId": "1",
+      "text": "Bomber och granater",
+      "user": "Hadock",
+      "id": 9
+    },
+    {
+      "bookId": "1",
+      "text": "Juveler",
+      "user": "Castafiore",
+      "id": 10
+    },
+    {
+      "bookId": "1",
+      "text": "Rackman",
+      "user": "Mathias",
+      "id": 11
+    },
+    {
+      "bookId": "2",
+      "text": "Nice",
+      "user": "Professor Kalkyl",
+      "id": 12
+    },
+    {
+      "bookId": "5",
+      "text": "Gastkramande",
+      "user": "Rastapopolus",
+      "id": 13
+    },
+    {
+      "bookId": "6",
+      "text": "Test",
+      "user": "Mathias",
+      "id": 14
+    },
+    {
+      "bookId": "6",
+      "text": "Foo bar",
+      "user": "Mathias",
+      "id": 15
+    },
+    {
+      "bookId": "1",
+      "text": "Sovjet rockar",
+      "user": "Putin",
+      "id": 16
+    },
+    {
+      "bookId": "8",
+      "text": "Bomber och granater",
+      "user": "Haddock",
+      "id": 17
+    }
+  ]
+}
